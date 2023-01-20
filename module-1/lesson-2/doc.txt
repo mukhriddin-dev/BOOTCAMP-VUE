@@ -1,0 +1,11 @@
+1. gradients ,  scroll-behavior , background , 
+2. pseudo class  -> hover , active , visted , focus  .. . . .
+, pseudo elements -> ::after , ::before, ::first-letter, ::first-line , ::placeholder, ::selection 
+3. Prefix , minifire
+4. position -> 
+
+
+Dropdown , custom checkbox 
+3. transform
+4. transition
+5. animation

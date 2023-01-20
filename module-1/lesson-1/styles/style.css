@@ -56,7 +56,8 @@ header {
 
 /* main start */
 
-.flex-container {
+/* flex satart*/
+/* .flex-container {
   background-color: teal;
   height: 500px;
   padding: 0px 0;
@@ -85,13 +86,75 @@ header {
   flex-grow: 4;
   flex-shrink: 0;
   flex: 4 0 200px;
+} */
+
+/* flex end */
+
+/* grid */
+
+.grid-container {
+  background-color: seagreen;
+  min-height: 500px;
+  display: grid;
+  align-items: stretch;
+  justify-items: stretch;
+  grid-template-columns:repeat(4   , minmax(320px , 1fr));
+  grid-template-rows: 70px 90vh 200px 70px;
+  grid-template-areas: 
+  "nav nav nav nav"
+  "sidebar main main aside"
+  "content card card card"
+  "footer footer footer footer"
+  ;
 }
 
-.box {
-  width: 400px;
-  height: 400px;
-  background-color: rgb(175, 175, 175);
-  box-shadow: 3px 3px 2px 0px red, 8px 8px 2px 0px green, 16px 16px 2px yellow,
-    20px 20px 2px blue;
-  margin: 0 auto;
+
+
+.grid-item {
+  background-color: #fff;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
+
+.grid-item:nth-child(1){
+  background-color: blue;
+  grid-area: nav;
+}
+
+
+.grid-item:nth-child(2){
+  background-color: orange;
+  grid-area:sidebar;
+}
+
+
+.grid-item:nth-child(3){
+  background-color: rgb(0, 234, 255);
+  grid-area:main;
+}
+
+.grid-item:nth-child(4){
+  background-color: rgb(42, 42, 41);
+  grid-area:footer; 
+}
+
+.grid-item:nth-child(5){
+  background-color: rgb(245, 245, 74);
+  grid-area:aside;
+}
+
+
+.grid-item:nth-child(6){
+  background-color: rgb(188, 20, 53);
+  grid-area:content;
+}
+
+.grid-item:nth-child(7){
+  background-color: rgb(20, 188, 59);
+  grid-area:card;
+}
+
+
+
