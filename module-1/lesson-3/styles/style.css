@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  background: #f857a6;
+  background: -webkit-linear-gradient(136deg, #f857a6 0%, #5172e7 100%);
+  background: linear-gradient(136deg, #f857a6 0%, #5172e7 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.778);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  color: #fff;
+  height: 75px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  color: #fff;
+}
+
+
+.nav__logo:hover {
+  color: rgb(255, 227, 135);
+  cursor: pointer;
+}
+
+.nav__logo:active {
+  color: lime;
+}
+
+.nav__list {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav__list--item {
+  background-color: rgba(217, 217, 217, 0.342);
+  padding: 25px 38px;
+}
+
+
+.nav__list--item-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__list--item-link:hover {
+  color: silver;
+}
+
+/* main start */
+main {
+  padding-top: 70px;
+}
+
+.intro {
+  background-image: url("https://picsum.photos/id/300/1700/1100");
+  width: 100%;
+  height: calc(100vh - 75px);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.wrapper .intro_title {
+  color: rgb(255, 230, 0);
+  font-size: 80px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: lawngreen;
+  -webkit-text-stroke-width: 4px;
+}
+
+
+
+/* .wrapper .intro_title:hover::after {
+  content: "APP";
+  color: red;
+  width: 400px;
+  height: 400px;
+ 
+}
+
+.wrapper .intro_title:hover::before {
+  content: "APP";
+  color: cadetblue;
+  width: 400px;
+  height: 400px;
+} */
+
+.about {
+  background-image: url("https://picsum.photos/id/122/1700/1100");
+  width: 100%;
+  height: calc(100vh);
+  background-attachment: fixed;
+}
+
+.contact {
+  background-image: url("https://picsum.photos/id/522/1700/1100");
+  width: 100%;
+  height: calc(100vh);
+  background-attachment: fixed;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background-color: transparent;
+  position: relative;
+}
+
+.wrapper h3 {
+  color: lime;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+
+.box {
+  background-color: crimson;
+  width: 180px;
+  height: 180px;
+  margin: 2px;
+  position: absolute;
+
+}
+
+.box:nth-child(1) {
+  bottom: 0;
+  background-color: lime;
+}
+
+.box:nth-child(2) {
+
+  right: 0;
+  background-color: rgb(0, 81, 255);
+}
+
+.box:nth-child(3) {
+
+  top: 30px;
+  background-color: greenyellow;
+}
+
+
+
+.to-top {
+  width: 46px;
+  height: 46px;
+  background-color: lime;
+  position: fixed;
+  z-index: 2;
+  right: 15px;
+  bottom: 15px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.to-top:active {
+  background-color: crimson;
+  color: #fff;
+}
+
+
+
+footer {
+  background-color: rgb(30, 39, 92);
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+}
+
+
+/* dropdown */
+/* .intro-s:hover ~ .dropdown__menu{
+  display: none !important;
+} */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown__menu {
+  display: block;
+  opacity: 1;
+  top: 70px;
+
+}
+
+.dropdown__menu {
+  transition: top 0.5s cubic-bezier(0.99, -0.49, 0, 1.5);
+  position: absolute;
+  background-color: #fff;
+  top: 110px;
+  border: 1px solid #000;
+  min-width: 170px;
+  left: -30px;
+  z-index: 3;
+  opacity: 0;
+}
+
+.dropdown__menu .dropdown__menu--item {
+  padding: 6px 12px;
+  background-color: rgba(217, 217, 217, 0.472);
+  margin: 1px auto;
+  transition: all 0.3s cubic-bezier(0.99, -0.49, 0, 1.5);
+}
+
+.dropdown__menu .dropdown__menu--item:hover {
+  background-color: #fff;
+}
+
+.dropdown__menu .dropdown__menu--item:hover .dropdown__menu--item-link {
+  color: crimson;
+}
+
+
+.dropdown__menu .dropdown__menu--item .dropdown__menu--item-link {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s cubic-bezier(0.99, -0.49, 0, 1.5);
+}
