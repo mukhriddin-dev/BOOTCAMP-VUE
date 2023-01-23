@@ -82,7 +82,7 @@ main {
 }
 
 .intro {
-  background-image: url("https://picsum.photos/id/300/1700/1100");
+  background-image: url("https://picsum.photos/id/250/1700/1100");
   width: 100%;
   height: calc(100vh - 75px);
   background-attachment: fixed;
@@ -234,6 +234,7 @@ footer {
   left: -30px;
   z-index: 3;
   opacity: 0;
+
 }
 
 .dropdown__menu .dropdown__menu--item {
@@ -241,6 +242,7 @@ footer {
   background-color: rgba(217, 217, 217, 0.472);
   margin: 1px auto;
   transition: all 0.3s cubic-bezier(0.99, -0.49, 0, 1.5);
+  list-style-type: none;
 }
 
 .dropdown__menu .dropdown__menu--item:hover {
@@ -256,4 +258,150 @@ footer {
   text-decoration: none;
   color: #000;
   transition: all 0.3s cubic-bezier(0.99, -0.49, 0, 1.5);
+}
+
+/* dropdown end */
+
+
+
+.card {
+  width: 1200px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.304);
+  box-shadow: 0 0 34px rgb(13, 12, 12);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid #fff;
+  /* transform: translate(100px , 100px); */
+  /* transform: rotate(20deg); */
+  /* transform: scale(1.1); */
+  /* transform: skew(2deg , 1deg); */
+  /* transition: all 0.4s ease; */
+  transform: translate(100px , 10px) rotate(10deg) scale(0.8) ;
+}
+
+.card:hover{
+    /* transform: skew(0deg, 0deg); */
+}
+
+.form__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: crimson;
+  text-shadow: 1px 1px 20px rgb(1, 196, 47);
+}
+
+
+label {
+  width: 50%;
+  margin: 10px auto;
+  display: block;
+  background-color: transparent;
+}
+
+label p {
+  font-family: sans-serif;
+  margin: 5px 0;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(1, 54, 212);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
+input::placeholder {
+  color: green !important;
+}
+
+input[type="file"] {
+  color: green;
+  background-color: #fff;
+}
+
+
+
+#switch {
+  background-color: #fff;
+  appearance: none;
+  width: 61px;
+  height: 28px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 14px;
+  position: relative;
+  padding: 0;
+  border: 1px solid crimson;
+  transition: all 0.3s ease;
+}
+
+#switch:checked {
+  background-color: #fff;
+  appearance: none;
+  width: 61px;
+  height: 28px;
+  display: block;
+  margin: 10px auto;
+  border-radius: 14px;
+  position: relative;
+  padding: 0;
+  border: 1px solid lime;
+}
+
+#switch::after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: crimson;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#switch:checked::after {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: lime;
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+}
+
+
+
+
+
+.btn {
+  border: none;
+  padding: 12px;
+  display: block;
+  margin: 12px auto;
+  background-color: crimson;
+  color: #fff;
+  transition: all 1.2s ease;
+}
+
+.btn:hover {
+  background-color: rgb(30, 117, 160);
+}
+
+.btn:active {
+  background-color: rgb(30, 160, 33);
+}
+
+
+#switch:checked~.btn {
+  background-color: green;
+  transform: rotate(360deg);
 }
