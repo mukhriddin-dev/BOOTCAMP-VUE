@@ -5,6 +5,40 @@
   scroll-behavior: smooth;
 }
 
+.loader {
+  font-size: 48px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #FF3D00;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.loader::after {
+  content: 'Loading';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 8s ease-in infinite;
+}
+
+@keyframes animloader {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
 .circle {
   background-color: crimson;
   width: 100px;
@@ -20,8 +54,8 @@
   animation-name: circle;
   animation-duration: 5s;
   animation-delay: 1s;
-  animation-timing-function: cubic-bezier(0, 1.46, 0.74, -0.25);
-  animation-fill-mode:forwards;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
   animation-direction: alternate;
   animation-play-state: running;
   animation-iteration-count: 1;
@@ -34,7 +68,7 @@
 
 
 
-@keyframes circle {
+@keyframe {
 
   0% {
     background-image: url("https://picsum.photos/id/123/900/700");
@@ -118,5 +152,117 @@
     align-items: center;
     font-family: sans-serif;
   }
+
+}
+
+
+.car {
+  width: 200px;
+  transform: rotate(0deg);
+  filter: drop-shadow(260px 10px 20px yellow);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  animation-name: carRun;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forward;
+}
+
+.car::after{
+  content: "load";
+  display: inline-block;
+  width: 80px;
+  height: 44px;
+  background-color: crimson;
+  position: absolute;
+  z-index: 333;
+}
+
+@keyframes carRun {
+  0% {
+    transform: rotate(0deg);
+    left: 40px;
+    top: 40px;
+  }
+
+  10% {
+    transform: rotate(0deg);
+    left: 840px;
+    top: 40px;
+  }
+
+
+  20% {
+    transform: rotate(90deg);
+    left: 840px;
+    top: 40px;
+  }
+
+
+
+  30% {
+    transform: rotate(90deg);
+    left: 840px;
+    top: 240px;
+  }
+
+  40% {
+    transform: rotate(0deg);
+    left: 840px;
+    top: 240px;
+  }
+
+
+
+  50% {
+    transform: rotate(0deg);
+    left: 1140px;
+    top: 240px;
+  }
+
+
+  60% {
+    transform: rotate(90deg);
+    left: 1140px;
+    top: 240px;
+  }
+
+  70% {
+    transform: rotate(90deg);
+    left: 1140px;
+    top: 440px;
+  }
+
+
+
+  80% {
+    transform: rotate(180deg);
+    left: 1140px;
+    top: 440px;
+  }
+
+
+  90% {
+    transform: rotate(180deg);
+    left: 40px;
+    top: 440px;
+  }
+
+  95% {
+    transform: rotate(270deg);
+    left: 40px;
+    top: 440px;
+  }
+
+
+
+  100% {
+    transform: rotate(270deg);
+    left: 40px;
+    top: 40px;
+  }
+
+
 
 }

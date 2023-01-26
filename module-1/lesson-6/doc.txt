@@ -2,3 +2,13 @@
 2. SCSS
 
 
+
+
+  animation-name: circle;   --> animate nomi
+  animation-duration: 5s;   --> animation davomiyligi
+  animation-delay: 1s;      --> animation kechikish holati
+  animation-timing-function:linear;  --> animation harakat 
+  animation-fill-mode:forwards;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-iteration-count: 1;
