@@ -1,7 +1,0 @@
-
-1. RWD -> responsive web design
-1.1 Desktop first / Mobile first
-1.2 Breakpoint 
-1.4 Media queries
-
-2. animation
