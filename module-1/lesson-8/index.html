@@ -8,47 +8,63 @@
     <title>Lesson-8</title>
     <!-- Bootstarp CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <style>
-        .box {
-            width: 300px;
-            height: 300px;
-
-        }
-
-        .wrapper{
-            height: 700px;
+        .nav {
+            height: 70px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1 class="bg-warning text-danger text-center text-uppercase w-50">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In molestias aperiam itaque.
-    </h1>
+    <header class="w-100 bg-success">
+        <div class="container-sm">
+            <nav class="nav d-flex justify-content-between w-100 align-items-center">
+                <a href="#" class="nav__logo text-white text-decoration-none fs-2">LOGO</a>
 
-    <div
-        class="position-relative start-50 shadow-lg border-5  box bg-light px-5  d-flex justify-content-center align-items-center">
-        <p>box</p>
-    </div>
+                <ul class="nav__list d-none justify-content-between w-50 list-unstyled d-sm-none d-md-flex">
+                    <li class="nav__list--item text-uppercase"><a href="#"
+                            class="nav__list--item-link text-decoration-none text-white">link</a></li>
+                    <li class="nav__list--item text-uppercase"><a href="#"
+                            class="nav__list--item-link text-decoration-none text-white">link</a></li>
+                    <li class="nav__list--item text-uppercase"><a href="#"
+                            class="nav__list--item-link text-decoration-none text-white">link</a></li>
+                    <li class="nav__list--item text-uppercase"><a href="#"
+                            class="nav__list--item-link text-decoration-none text-white">link</a></li>
+                </ul>
+
+                <i class="bi bi-list nav__menu text-white d-block fs-2 d-md-none "></i>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4  p-3 bg-info">
+                        col-1
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 p-3 bg-warning">col-2</div>
+
+                    <div class="col-12 col-sm-12 col-md-4 p-3 bg-secondary">col-3</div>
+
+                    <div class="col-12 col-sm-8 col-md-6 bg-danger p-3">
+                        col
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-6 bg-primary p-3">
+                        col
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
 
-    <div class="wrapper d-flex justify-content-evenly align-items-center bg-warning flex-row flex-wrap">
-        <div class="item p-5 bg-success m-1">item-1</div>
-        <div class="item p-5 bg-success m-1">item-2</div>
-        <div class="item p-5 bg-success m-1">item-3</div>
-        <div class="item p-5 bg-success m-1">item-4</div> 
-        <div class="item p-5 bg-success m-1">item-5</div>
-        <div class="item p-5 bg-success m-1">item-6</div>
-        <div class="item p-5 bg-danger m-1">item-81</div>
-        <div class="item p-5 bg-danger m-1">item-82</div>
-        <div class="item p-5 bg-danger m-1">item-83</div>
-        <div class="item p-5 bg-danger m-1">item-84</div>
-        <div class="item p-5 bg-danger m-1">item-85</div>
-        <div class="item p-5 bg-danger m-1">item-86</div>
-        <div class="item p-5 bg-danger m-1">item-87</div>
-        <div class="item p-5 bg-danger m-1">item-88</div>
-    </div>
 
 
 
