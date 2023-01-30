@@ -1,0 +1,198 @@
+header {
+    width: 100%;
+    background-color: green;
+    font-family: sans-serif;
+
+    .nav {
+        @include navlist(100%, space-between, center, 70px);
+
+        &__logo {
+            font-size: 28px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &__menu {
+            color: #fff;
+            font-size: 32px;
+            display: none;
+        }
+
+        &__list {
+            @extend %list;
+            @include navlist(35%, space-between, center, auto);
+            padding: 26px;
+            text-transform: uppercase;
+            transition: all 0.5s ease;
+
+            &--item {
+
+                &-link {
+                    @extend %link;
+                    color: #fff;
+
+                    &:hover {
+                        color: rgb(93, 81, 81);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swipe{
+    transform: translateX(-200%);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        width: 100%;
+        background-color: rgb(0, 81, 128);
+        font-family: sans-serif;
+
+        .nav {
+            @include navlist(100%, space-between, center, 70px);
+
+            &__logo {
+                font-size: 24px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            &__menu {
+                color: #fff;
+                font-size: 32px;
+                display: none;
+            }
+
+            &__list {
+                @extend %list;
+                @include navlist(45%, space-between, center, auto);
+                padding: 26px;
+                text-transform: uppercase;
+
+                &--item {
+
+                    &-link {
+                        @extend %link;
+                        color: #fff;
+
+                        &:hover {
+                            color: rgb(93, 81, 81);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width:428px) {
+
+    header {
+        width: 100%;
+        background-color: rgb(0, 81, 128);
+        font-family: sans-serif;
+
+        .nav {
+            @include navlist(100%, space-between, center, 70px);
+            position: relative;
+            z-index: 9999;
+
+            &__logo {
+                font-size: 24px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            &__menu {
+                color: #fff;
+                font-size: 32px;
+                display: block;
+            }
+
+            &__list {
+                @include navlist(100%, flex-start, flex-start, auto);
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                background-color: rgba(0, 0, 0, 0.576);
+                z-index: 222;
+                height: 100vh;
+               
+
+                &--item {
+                    background-color: silver;
+                    width: 100%;
+                    padding: 10px;
+                    margin: 1px;
+                    cursor: pointer;
+
+                    &-link {
+
+                        color: #fff;
+
+                        &:hover {
+                            color: rgb(93, 81, 81);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:375px) {
+
+    header {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        font-family: sans-serif;
+
+        .nav {
+            @include navlist(100%, space-between, center, 70px);
+
+            &__logo {
+                font-size: 24px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            &__menu {
+                color: #fff;
+                font-size: 32px;
+                display: block;
+            }
+
+            &__list {
+
+                @include navlist(45%, space-between, center, auto);
+                padding: 26px;
+                text-transform: uppercase;
+                display: none;
+
+                &--item {
+
+                    &-link {
+
+                        color: #fff;
+
+                        &:hover {
+                            color: rgb(93, 81, 81);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

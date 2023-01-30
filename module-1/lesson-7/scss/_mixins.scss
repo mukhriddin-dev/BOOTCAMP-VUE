@@ -1,0 +1,18 @@
+@mixin card($w, $minh, $maxh, $bs, $bg, $br, $m) {
+    width: $w;
+    min-height: $minh;
+    max-height: $maxh;
+    box-shadow: $bs;
+    background-color: $bg;
+    border-radius: $br;
+    margin: $m;
+}
+
+
+@mixin navlist($w, $jf , $ai, $h ){
+    display: flex;
+    width: $w;
+    justify-content: $jf;
+    align-items: $ai;
+    height: $h;
+}

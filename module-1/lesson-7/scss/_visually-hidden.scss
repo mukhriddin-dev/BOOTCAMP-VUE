@@ -1,0 +1,10 @@
+.hide{
+    opacity: 0;
+    clip-path: polygon( 0 0 , 0 0 , 0 0);
+    visibility: hidden;
+    overflow: hidden;
+    width: 1px;
+    height: 0;
+    margin: -2px;
+}
+

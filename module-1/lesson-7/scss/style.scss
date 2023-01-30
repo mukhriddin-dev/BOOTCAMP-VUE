@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "./fonts";
+@import "./normalize";
+@import "./variables";
+@import "./general";
+@import "./mixins";
+@import "./extends";
+@import "./visually-hidden";
+@import "./blocks/all-blocks";
+
+
+
+
+
+
+
+
+.card{
+@include card(300px, 360px, 520px,  rgba(0, 0, 0, 0.2) 0px 20px 30px, #fff , 8px , 10px)
+}
+
+
+.box {
+    @include card(400px, 460px, 520px, rgba(225, 27, 27, 0.2) 1px 20px 30px, #fff, 5px, 10px)
+}

@@ -1,0 +1,31 @@
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+%list {
+    list-style: none;
+}
+
+%card-style {
+    padding: 16px 16px 24px;
+    gap: 24px;
+    width: 342px;
+    height: 549px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+
+%list-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
