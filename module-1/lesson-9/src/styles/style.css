@@ -2,3 +2,22 @@ body {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
 }
+
+.shaker {
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes shake {
+    from {
+        transform: translate(-20px, -5px);
+    }
+
+    to {
+        transform: translate(20px, 5px);
+    }
+}

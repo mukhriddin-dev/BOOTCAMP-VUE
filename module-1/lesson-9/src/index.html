@@ -17,51 +17,121 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap"
     rel="stylesheet">
 
+  
 </head>
 
 <body>
 
 
-
+  <!-- ----------- header start --------------->
   <header class="py-12 shadow-md">
 
     <div class="container bg-white mx-auto">
 
-      <nav class="nav flex justify-around items-center h-14">
+      <nav class="nav flex justify-around sm:justify-between  items-center h-4">
 
-        <ul class="nav__list hidden  justify-between w-1/4 sm:hidden md:flex">
-          <li class="nav__list--item"><a href="#" class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">About us</a></li>
-          <li class="nav__list--item"><a href="#" class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">Service</a></li>
-          <li class="nav__list--item"><a href="#" class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">Menu</a></li>
-          <li class="nav__list--item"><a href="#" class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">Contact</a></li>
+        <ul class="nav__list hidden   justify-between w-1/4  lg:flex">
+
+          <li class="nav__list--item"><a href="#"
+              class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">About us</a></li>
+          <li class="nav__list--item"><a href="#"
+              class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">Service</a></li>
+          <li class="nav__list--item"><a href="#"
+              class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">Menu</a></li>
+          <li class="nav__list--item"><a href="#"
+              class="nav__list--item-link hover:text-slate-400 active:text-green-700 duration-200 ">Contact</a></li>
         </ul>
 
-        <a href="#" class="nav__logo">
+        <a href="#" class="nav__logo order-1 lg:order-2 sm:ml-20 ml-24">
           <img src="./images/logo.svg" alt="logo" class="hover:scale-105 duration-200">
         </a>
 
-        <ul class="nav__menu flex w-72 justify-between">
-          <li class="nav__menu--item">
+        <!-- toogle menu s -->
+          <i class='bx bx-menu nav__toggle text-5xl lg:hidden'></i>
+        <!-- toogle menu e -->
+
+        <ul class="nav__menu flex w-72 justify-end  md:justify-between order-2 lg:order-3">
+          <li class="nav__menu--item  hidden md:block">
             <span class="bg-green-100 h-10 w-10 flex justify-center items-center rounded-full">
               <i class='bx bx-search text-lg'></i>
             </span>
           </li>
-          <li class="nav__menu--item">
+          <li class="nav__menu--item  hidden md:block">
             <span class="bg-green-100 h-10 w-10 flex justify-center items-center  rounded-full">
               <i class='bx bx-cart text-lg'></i>
             </span>
           </li>
           <li class="nav__menu--item">
-            <button class="bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700 active:text-yellow-300 duration-300 active:bg-green-800 ">
+            <button
+              class="register-btn bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700 active:text-yellow-300 duration-300 active:bg-green-800 ">
               Regester Now
             </button>
           </li>
         </ul>
+
       </nav>
     </div>
   </header>
+  <!-- ----------- header end --------------->
+
+  <div class="modal-window bg-[#0000007e]  w-full min-h-screen fixed top-0 z-10 hidden">
+
+    <div class="modal-content duration-200 w-[800px] min-h-[580px] bg-white mx-auto mt-32 rounded-2xl overflow-hidden">
+
+      <div class="modal-header bg-slate-200  text-slate-800 p-4 text-center">
+        <h2 class="font-bold text-2xl uppercase text-slate-800">Rigistration form</h2>
+      </div>
+
+      <div class="modal-body bg-white min-h-[440px] flex justify-center items-center">
+
+        <form action="#" class=" min-w-[80%] p-3 text-center">
+
+          <label for="fullname" class="w-full">
+            <p class="mb-2 text-left ml-16 mt-2">Enter fullname <span class="text-red-600">*</span></p>
+            <input type="text"
+              class="w-[80%] mx-auto p-3 mb-4  focus:ring-4 focus:ring-sky-400 rounded-md focus:outline-none border"
+              id="fullname" placeholder="enter fullname">
+          </label>
+
+          <label for="tel" class="w-full">
+            <p class="mb-2 text-left ml-16">Enter phone number <span class="text-red-600">*</span></p>
+            <input type="tel"
+              class="w-[80%] mx-auto p-3 mb-4 focus:ring-4 focus:ring-sky-400 rounded-md focus:outline-none border" id="tel"
+              placeholder="enter phone number">
+          </label>
+
+          <label for="pasword" class="w-full">
+            <p class="mb-2 text-left ml-16">Enter password <span class="text-red-600">*</span></p>
+            <input type="password"
+              class="w-[80%] mx-auto p-3 mb-4 focus:ring-4 focus:ring-sky-400 rounded-md focus:outline-none border"
+              id="password" placeholder="enter password">
+          </label>
+
+          <button
+            class="btn block mx-auto w-[80%] my-4 bg-green-600 px-4 py-2 rounded-lg text-white font-bold hover:bg-green-700  focus:ring-4 focus:ring-green-400 duration-200" type="submit">SIGN
+            UP
+          </button>
+
+
+        </form>
+
+
+      </div>
+
+      <div class="modal-footer bg-slate-200 text-right p-2">
+        <button
+          class="close-btn bg-red-600 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-red-700 focus:ring-4 focus:ring-red-400 duration-200">CLOSE</button>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
 
 
 </body>
+<script src="./script/index.js"></script>
 
 </html>
