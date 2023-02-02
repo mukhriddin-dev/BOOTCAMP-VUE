@@ -17,7 +17,7 @@ closeBtn.addEventListener('click', () => {
 
 
 window.addEventListener('click', (e) => {
-    console.log(e.target.classList.contains('modal-window'));
+    // console.log(e.target.classList.contains('modal-window'));
     if (e.target.classList.contains('modal-window')) {
         // modalContent.classList.toggle('shaker');
         modalWindow.classList.add('hidden');
@@ -54,7 +54,7 @@ const createElemet = (tagName, className, content) => {
     const element = document.createElement(tagName);
 
     if (className) {
-        element.classList.add(className);
+        element.setAttribute('class', className);
     }
 
     if (content) {
@@ -66,12 +66,9 @@ const createElemet = (tagName, className, content) => {
 }
 
 
-
-
-
 cards.forEach(items => {
 
-    const newElement = createElemet('div', "", `<div class="card hover:shadow-lg bg-white flex justify-between items-center py-5 pr-11 pl-8 rounded-sm mb-[30px]">
+    const newElement = createElemet('div', "card hover:shadow-lg bg-white flex justify-between items-center py-5 pr-11 pl-8 rounded-sm mb-[30px]", `
 
               <span class="p-3 bg-green-100 rounded-full">
                 <img src="${items.img}" alt="user">
@@ -82,11 +79,47 @@ cards.forEach(items => {
                 <p>${items.description}</p>
               </div>
 
-            </div>`)
+           `);
 
     introProduct.append(newElement);
 })
 
 
+
+
+let icon = document.querySelector('.icon'),
+    box = document.querySelector('.box');
+
+// icon.onclick = function (e) {
+//     console.log(this.style.color = "red");
+//     console.log(e.target.style)
+// }
+
+// icon.addEventListener('mouseover', (e) => {
+//     console.log(e.target.style.borderRadius = "40px")
+// })
+
+
+// icon.addEventListener('mouseout', (e) => {
+//     console.log(e.target)
+// })
+
+icon.addEventListener('mousedown', (e) => {
+    console.log("DOWN")
+})
+
+
+icon.addEventListener('mouseup', (e) => {
+    console.log("UP")
+})
+
+
+window.addEventListener('mousemove', (e) => { 
+
+    let x = e.clientX
+    let y = e.clientY
+    console.log(x, y)
+    box.style.transform = `translate(${x}px,${y}px)`;
+})
 
 

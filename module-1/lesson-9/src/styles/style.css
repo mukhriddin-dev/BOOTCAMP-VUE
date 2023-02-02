@@ -1,6 +1,13 @@
+*{
+cursor: none;
+    pointer-events: none;
+}
+
+
 body {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
+   
 }
 
 .shaker {
@@ -21,3 +28,11 @@ body {
         transform: translate(20px, 5px);
     }
 }
+
+.box{
+    cursor:none;
+    pointer-events:visible;
+    transition: all 0.1s ease;
+}
+
+
