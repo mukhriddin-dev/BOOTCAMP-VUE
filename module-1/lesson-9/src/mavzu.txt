@@ -5,3 +5,9 @@
 2- remove
 3- contains
 4- toggle 
+
+
+2. Event handlers
+3. Dynamic elements
+
+
