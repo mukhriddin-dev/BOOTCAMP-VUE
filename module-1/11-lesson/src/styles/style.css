@@ -1,0 +1,30 @@
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400px;
+}
+
+.shaker {
+  animation-name: shake;
+  animation-duration: 0.09s;
+  animation-iteration-count: 5;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+@keyframes shake {
+  from {
+    transform: translate(-5px, 0px);
+  }
+  to {
+    transform: translate(0px, -5px);
+  }
+}
+.info__content---items-item:hover .info__content---items-item-logo {
+  background-color: white;
+}
+
+.left-icon:hover .bx-chevron-left {
+  color: white;
+}
+.right-icon:hover .bx-chevron-right {
+  color: white;
+}

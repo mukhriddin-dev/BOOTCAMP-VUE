@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- main css -->
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./output.css" />
+  <!-- boc icon -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap"
+    rel="stylesheet" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+  <title>leeson-9</title>
+</head>
+
+<body>
+  <!-- header started -->
+  <header class="py-12 shadow-md">
+    <div class="container mx-auto">
+      <div class="nav flex justify-around items-center h-14">
+        <ul class="nav__list items-center justify-between w-1/4 hidden lg:flex">
+          <li class="nav__list--item hover:text-slate-400 active:text-green-700 duration-200">
+            <a href="#" class="nav__list--item- link">About us</a>
+          </li>
+          <li class="nav__list--item hover:text-slate-400 active:text-green-700 duration-200">
+            <a href="#" class="nav__list--item-link">Service</a>
+          </li>
+          <li class="nav__list--item hover:text-slate-400 active:text-green-700 duration-200">
+            <a href="#" class="nav__list--item-link">Menu</a>
+          </li>
+          <li class="nav__list--item hover:text-slate-400 active:text-green-700 duration-200">
+            <a href="#" class="nav__list--item-link">Contact</a>
+          </li>
+        </ul>
+        <a href="#" class="nav__logo lg:order-none order-2">
+          <img src="./images/planet-earth (1) 1.svg" class="hover:scale-105" alt="logo" />
+        </a>
+
+        <ul class="nav__menu flex w-72 justify-end md:justify-between lg:order-none order-2">
+          <li class="nav__menu--item sm:hidden hidden md:block">
+            <a href="">
+              <span
+                class="bg-green-100 flex justify-center items-center h-10 w-10 rounded-full hover:bg-green-600 hover:text-white duration-300 active:text-black active:bg-green-100"><i
+                  class="bx bx-search text-xl"></i></span>
+            </a>
+          </li>
+          <li class="nav__menu--item sm:hidden hidden md:block">
+            <span
+              class="bg-green-100 flex justify-center items-center h-10 w-10 rounded-full hover:bg-green-600 hover:text-white duration-300 active:text-black active:bg-green-100"><i
+                class="bx bx-cart"></i></span>
+          </li>
+          <li class="nav__menu--item">
+            <button type="submit"
+              class="register-btn bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700 duration-300 active:text-black active:bg-green-100">
+              Register now
+            </button>
+          </li>
+        </ul>
+        <button type="button"
+          class="btn-menu bg-green-100 lg:order-none lg:hidden order-1 flex justify-center items-center h-10 w-10 rounded-full hover:bg-green-600 hover:text-white duration-300 active:text-black active:bg-green-100">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- header finished -->
+
+  <!-- modal started -->
+  <div class="modal-window hidden bg-[#00000081] w-full min-h-screen fixed top-0 z-10 backdrop-blur-sm">
+    <div
+      class="modal-content duration-200 max-w-[800px] min-h-[580px] bg-white mx-auto mt-40 rounded-2xl overflow-hidden shadow-md shadow-slate-900">
+      <div class="modal-header bg-slate-200 text-slate-800 p-4 text-center">
+        <h2 class="font-bold text-2xl uppercase text-slate-800">
+          Registration form:
+        </h2>
+      </div>
+
+      <div class="modal-body bg-white min-h-[440px] flex justify-center items-center">
+        <form action="#" class="min-w-[80%] p-3 rounded-md text-center">
+          <label for="fullname" class="w-full">
+            <p class="mb-2 text-left ml-16 mt-2">
+              Enter fullname <span class="text-red-600">*</span>
+            </p>
+            <input type="text"
+              class="form-control w-[80%] mx-auto p-3 rounded-md mb-4 focus:ring-4 focus:ring-sky-400 focus:outline-none border"
+              id="fullname1" placeholder="enter fullname" />
+          </label>
+
+          <label for="tel">
+            <p class="mb-2 text-left ml-16">
+              Enter phone number <span class="text-red-600">*</span>
+            </p>
+            <input type="tel" placeholder="enter phone number"
+              class="form-control w-[80%] mx-auto p-3 rounded-md mb-4 focus:ring-4 focus:ring-sky-400 focus:outline-none border"
+              id="tel" />
+          </label>
+
+          <label for="password">
+            <p class="mb-2 text-left ml-16">
+              Enter password <span class="text-red-600">*</span>
+            </p>
+            <input type="password" placeholder="enter password"
+              class="form-control w-[80%] mx-auto p-3 rounded-md mb-4 focus:ring-4 focus:ring-sky-400 focus:outline-none border"
+              id="password" />
+          </label>
+          <button
+            class="btn block mx-auto w-[80%] my-4 bg-green-500 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-green-700 focus:ring-4 focus:ring-green-400 duration-200">
+            SIGN UP
+          </button>
+        </form>
+      </div>
+
+      <div class="modal-footer bg-slate-200 text-right p-2">
+        <button type="submit"
+          class="close-btn bg-red-600 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-red-700 focus:ring-4 focus:ring-red-400 duration-200">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- modal finished -->
+
+  <main>
+    <section class="intro bg-green-50">
+      <div class="container mx-auto text-center relative">
+        <img src="./images/fresh-melientha-suavis-pierre-leaves-white-surface_51524-12145-removebg-preview 1.png"
+          class="absolute left-0 top-0" alt="" />
+        <div class="intro-wrapper w-8/12 mx-auto pt-[93px] relative">
+          <h1 class="text-6xl font-bold text-center w-[783px] mx-auto mb-[26px] leading-[90px]">
+            Organic Fruit & Vegetables
+          </h1>
+          <p class="text-[#555555] text-lg w-[637px] mx-auto leading-8">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley...
+          </p>
+
+          <div class="icon intro__link flex items-center mx-auto h-[70px] justify-center mt-[40px]">
+            <a href="" class=""> Order now </a>
+            <i
+              class="bx bx-right-arrow-alt w-[60px] h-[60px] cursor-pointer bg-green-600 flex justify-center items-center ml-4 text-white text-2xl rounded-full text-white hover:bg-green-700 duration-300 active:text-black active:bg-green-100"></i>
+          </div>
+        </div>
+
+        <div class="intro__product flex justify-around">
+          <img src="./images/vegetables-removebg-preview.png" alt="ved" class="w-[862px]" />
+          <div class="intro__product--info p-2">
+            <!-- dinamic content -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- info section started -->
+    <section class="info">
+      <div class="container mx-auto">
+        <div class="title__wrapper relative w-4/5 mx-auto">
+          <h1 class="text-6xl font-bold w-[783px] mb-[20px] leading-[90px] mt-[140px]">
+            Why We Are The Best?
+          </h1>
+          <p class="text-[#555555] text-lg w-[637px] leading-8">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley...
+          </p>
+          <img src="./images/Vector 16.svg" alt="vektor" class="absolute -top-[170px] -z-10 -right-24" />
+        </div>
+        <div class="info__content w-4/5 mx-auto flex justify-between">
+          <div class="info__content---items flex flex-col mt-14">
+            <!-- dinamic content -->
+          </div>
+          <img src="./images/bola.png" alt="bola" />
+        </div>
+      </div>
+    </section>
+    <!-- info section finished -->
+    <!-- explor section started -->
+    <section class="explor bg-green-50">
+      <div class="container mx-auto">
+        <div class="explore__wrapper flex w-4/5 mx-auto pt-[89px] pb-[143px] relative overflow-hidden">
+          <img src="./images/Group 5287.jpg" alt="explor_img" />
+          <div class="explore__info mx-[50px]">
+            <h1 class="text-6xl font-bold w-[557px] mb-[20px] leading-[90px] mt-[20px]">
+              Explor Our Special Items
+            </h1>
+            <p class="text-[#555555] text-lg w-[574px] leading-8">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s, when an unknown printer took a
+              galley...
+            </p>
+            <div class="icon intro__link flex items-center mx-auto h-[70px] mt-[40px]">
+              <a href="" class=""> Explor Now </a>
+              <i
+                class="bx bx-right-arrow-alt w-[60px] h-[60px] cursor-pointer bg-green-600 flex justify-center items-center ml-4 text-white text-2xl rounded-full text-white hover:bg-green-700 duration-300 active:text-black active:bg-green-100"></i>
+            </div>
+            <img src="./images/fresh-melientha-suavis-pierre-leaves-white-surface_51524-12145-removebg-preview 1.png"
+              class="absolute -right-[110px] bottom-[20px]" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- explor section finished -->
+    <!-- Comment section started -->
+    <section class="comment">
+      <div class="container mx-auto">
+
+        <div class="comment__wrapper  swiper mySwiper  relative w-[81%] mx-auto overflow-hidden ">
+
+
+          <div class="list w-full  h-auto  flex swiper-wrapper  duration-700 ">
+
+          </div>
+
+          <div class="buttons flex justify-between w-[138px] absolute right-[52%] bottom-[17%] z-40 ">
+            <span
+              class="left-icon  w-14 h-14 border border-[#cccccc] rounded-full flex items-center
+              justify-center hover:bg-green-700">
+              <i class="bx bx-chevron-left text-3xl text-[#cccccc] " ></i>
+            </span>
+
+            <span
+              class="right-icon  w-14 h-14 border border-[#cccccc] rounded-full flex items-center
+              justify-center hover:bg-green-700">
+              <i class="bx bx-chevron-right text-3xl text-[#cccccc]"></i>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Comment section finished -->
+    <!-- download section startded -->
+    <section class="download">
+      <div class="container mx-auto">
+        <div class="download__wrapper w-4/5 mx-auto flex mb-[146px]">
+          <div class="w-[50%] relative">
+            <img src="./images/Group 5280.png" alt="" class="mx-auto" />
+            <img src="./images/Group 5280.png" alt="" class="absolute top-0 left-32 -z-20 scale-90" />
+          </div>
+
+          <div>
+            <a href="#"
+              class="text-[#333333] w-[170px] h-[40px] rounded-full flex items-center justify-center bg-green-100 hover:bg-green-700 hover:text-white">Download
+              App</a>
+            <h1 class="text-6xl font-bold w-[662px] mb-[20px] leading-[90px] mt-[20px]">
+              Simple Way To Order Your Organic Fruit
+            </h1>
+            <p class="text-[#555555] text-lg w-[586px] leading-8 mb-[50px]">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+              text ever since the 1500s, when an unknown printer...
+            </p>
+            <div class="flex w-[232px] justify-between">
+              <a href="#" class="hover:shadow-xl">
+                <img src="./images/App Store - eng.png" alt="app-store" />
+              </a>
+              <a href="#" class="hover:shadow-xl">
+                <img src="./images/Google Play - eng.png" alt="google play" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- download section finished -->
+  </main>
+  <!-- footer started -->
+  <footer class="footer bg-green-50">
+    <div class="container mx-auto">
+      <div class="footer__wrapper w-4/5 flex mx-auto justify-between">
+        <div>
+          <a href="#" class="nav__logo lg:order-none order-2">
+            <img src="./images/planet-earth (1) 1.svg" class="hover:scale-105 mb-[30px] mt-[66px]" alt="logo" />
+          </a>
+          <p class="text-[#555555] text-lg w-[345px] leading-8 mb-[50px] mb-[118px]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer...
+          </p>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold mb-[40px] leading-[31px] mt-[105px]">
+            Navigation
+          </h1>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              About Us
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              Service
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              Menu
+            </p>
+          </a>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold mb-[40px] leading-[31px] mt-[105px]">
+            Resources
+          </h1>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              Reviews
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              Blog
+            </p>
+          </a>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              Update News
+            </p>
+          </a>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold mb-[40px] leading-[31px] mt-[105px]">
+            Contact Us
+          </h1>
+          <a href="#">
+            <p class="text-[#555555] text-lg leading-8 mb-[25px] hover:text-green-600">
+              Email: oyasim@email.com
+            </p>
+            <div class="flex w-[172px] justify-between">
+              <i class="bx bxl-facebook text-2xl hover:text-green-600"></i>
+              <i class="bx bxl-twitter text-2xl hover:text-green-600"></i>
+              <i class="bx bxl-instagram text-2xl hover:text-green-600"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer finished -->
+  <!-- utils file -->
+  <script src="./scripts/utils.js"></script>
+  <script src="./scripts/index.js"></script>
+
+  <!-- Swiper JS -->
+  <script  src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".right-icon",
+        prevEl: ".left-icon",
+      },
+    });
+
+  </script>
+</body>
+
+</html>
