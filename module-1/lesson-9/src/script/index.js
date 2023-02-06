@@ -123,3 +123,7 @@ window.addEventListener('mousemove', (e) => {
 })
 
 
+
+let doc = new DocumentFragment();
+
+
