@@ -11,12 +11,58 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <title> Countries </title>
-  </head>
 
- <body>
-  
- </body>
+    <!-- main css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Countries</title>
+  </head>
+  <body>
+    <header class="bg-white shadow-xl fixed top-0 w-full">
+      <div class="container mx-auto">
+        <nav class="nav flex justify-between h-[80px] items-center">
+          <h1 class="text-3xl font-extrabold">Where in the world?</h1>
+
+          <div class="nav__switch h-[28px] flex items-center gap-2">
+            <input type="checkbox" id="them" />
+            <span>Dark Mode</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-24">
+      <section class="main">
+        <div class="container mx-auto">
+          <div class="main__control flex justify-between mt-12 w-full">
+            <input
+              type="search"
+              id="search"
+              class="p-6 shadow-sm w-4/12 focus:ring-2 bg-white text-lg focus:ring-cyan-500 border-spacing-1 border-slate-800 focus:outline-none rounded-sm"
+              placeholder="Search for a country…"
+            />
+
+            <select
+              id="region"
+              class="p-6 shadow-sm w-[200px] text-center bg-white rounded-sm"
+            >
+              <option disabled selected>Filter by region</option>
+              <option value="eur">Europe</option>
+              <option value="america">America</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="container mx-auto">
+          <div class="card__wrapper grid grid-cols-4 gap-[75px] mt-12">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
   <!-- utils js -->
   <script src="./utils/utils.js"></script>
   <!-- main script file -->
