@@ -1,12 +1,14 @@
 "use strict";
 
-
-
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
 } else {
-  document.documentElement.classList.remove('dark')
+  document.documentElement.classList.remove("dark");
 }
 
 // Whenever the user explicitly chooses light mode
@@ -18,12 +20,12 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 // Whenever the user explicitly chooses to respect the OS preference
 // localStorage.removeItem('theme')
 
-
 let them = document.querySelector("#them"),
   header = document.querySelector("header");
 
 them.addEventListener("input", (e) => {
-  localStorage.setItem("them", e.target.checked);
+  localStorage.setItem("them", "dark");
+
   changeMode();
 });
 
@@ -74,6 +76,7 @@ function renderCards(cards) {
   wrapperCards.innerHTML = ``;
 
   cards.forEach((element) => {
+
     const card = createElement(
       "div",
       `rounded-[5px] shadow-lg dark:bg-black max-w-sm w-[264px] h-[336px] text-gray-500 dark:text-red-600 `,
@@ -88,7 +91,7 @@ function renderCards(cards) {
               </a>
 
               <div class="p-6 pb-7">
-                <h5 class="text-xl font-medium mb-2">
+                <h5 class="text-xl font-medium mb-2 card_title" data-isname="${element.name}">
                   ${element.name}
                 </h5>
 
@@ -102,7 +105,9 @@ function renderCards(cards) {
         `
     );
 
+
     wrapperCards.append(card);
+
   });
 }
 
@@ -168,15 +173,14 @@ searchInput.addEventListener("keyup", (e) => {
   }
 });
 
-//  ------------------ cards -------------------------------- 
+//  ------------------ cards --------------------------------
 
+wrapperCards.addEventListener("click", (e) => {
 
+  if (e.target.classList.contains("card_title")) {
+    const isname = e.target.getAttribute("data-isname");
+    localStorage.setItem("isname",isname);
+    window.open("./country.html")
+  }
 
-
-let card = document.querySelector('.card');
-
-
-console.log(card)
-
-
-
+});
