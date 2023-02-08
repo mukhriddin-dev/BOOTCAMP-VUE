@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     screens: {
       sm: '640px',
