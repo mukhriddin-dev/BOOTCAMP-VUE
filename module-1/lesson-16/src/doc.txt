@@ -1,0 +1,32 @@
+http://178.62.198.221:3003/user/register -> sign up 
+                                          body {
+                                            username :String,
+                                            password :String
+                                          }
+
+http://178.62.198.221:3003/user/login -> sign in 
+                                          body {
+                                            username :String,
+                                            password :String
+                                          }
+
+
+http://178.62.198.221:3003/task    -> task list
+
+http://178.62.198.221:3003/task    -> POST 
+                                   body{
+                                     title:String,
+                                     user_id:number,
+                                     status:false,
+                                   }
+ 
+http://178.62.198.221:3003/task/:id   -> task:id  GET
+
+
+http://178.62.198.221:3003/task/:id  -> task:id PATCH
+
+
+http://178.62.198.221:3003/task/:id  -> task:id DELETE
+
+
+
