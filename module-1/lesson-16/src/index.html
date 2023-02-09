@@ -18,14 +18,89 @@
     <title>CRUD APP</title>
   </head>
   <body>
- 
+    <header class="bg-indigo-500">
+      <div class="container mx-auto">
+        <nav
+          class="nav flex h-[70px] bg-indigo-500 justify-between items-center"
+        >
+          <a href="#" class="nav-logo text-white text-[26px]">DASHBOARD</a>
 
-    
-   
-    
+          <div class="user">
+            <span
+              class="text-white bg-indigo-600 px-4 py-2 font-bold rounded-3xl"
+              id="user_name"
+              >Abdulaziz</span
+            >
+            <button
+              id="exit"
+              class="bg-indigo-700 ml-4 px-4 hover:bg-indigo-400 py-2 rounded-3xl text-white font-bold focus:ring-4 focus:ring-indigo-300"
+            >
+              Chiqish
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+      <main>
+          <section class="main">
+            <div class="container mx-auto">
+              
+              <div class="wrapper w-1/2 mx-auto shadow p-5 bg-white mt-36">
+
+                <h1
+                  class="wrapper__title text-center uppercase my-11 text-indigo-600 text-5xl font-bold"
+                >
+                  My to do list
+                </h1>
+
+                <form action="#" id="submitform">
+                  <div class="flex gap-1">
+                    <label for="task" class="w-full">
+                      <input
+                        id="task"
+                        type="text"
+                        placeholder="Enter new task title"
+                        class="p-3 w-full shadow focus:ring-4 focus:outline-none focus:ring-indigo-500 rounded-sm border-spacing-1 border border-blue-400"
+                      />
+                    </label>
+
+                    <button
+                      class="py-3 px-10 bg-indigo-600 text-white focus:ring-4 focus:ring-indigo-200 active:bg-indigo-700 rounded-sm"
+                      type="submit"
+                    >
+                      ADD
+                    </button>
+                  </div>
+
+                  <div class="flex justify-between gap-5 mt-5 cursor-pointer">
+                    <div
+                      class="border-spacing-1 border border-green-600 p-2 w-1/2"
+                    >
+                      <p class="text-green-500">
+                        To do done : <span id="done">50</span>
+                      </p>
+                    </div>
+
+                    <div
+                      class="border-spacing-1 border border-orange-600 p-2 w-1/2"
+                    >
+                      <p class="text-orange-500">
+                        To do on progress : <span id="progress">50</span>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+
+                <ul class="list mt-3">
+                  <!-- output list -->
+                </ul>
 
 
-
+              </div>
+            </div>
+          </section>
+        </main>
 
 
   </body>
