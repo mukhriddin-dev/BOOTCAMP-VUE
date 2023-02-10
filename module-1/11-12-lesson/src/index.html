@@ -19,6 +19,10 @@
     rel="stylesheet" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- aos css -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 
 
   <title>leeson-9</title>
@@ -27,6 +31,7 @@
 <body>
   <!-- header started -->
   <header class="py-12 shadow-md">
+
     <div class="container mx-auto">
       <div class="nav flex justify-around items-center h-14">
         <ul class="nav__list items-center justify-between w-1/4 hidden lg:flex">
@@ -133,7 +138,7 @@
 
   <main>
     <section class="intro bg-green-50">
-      <div class="container mx-auto text-center relative">
+      <div class="container mx-auto text-center relative intro__wrapper  translate-y-60 duration-500">
         <img src="./images/fresh-melientha-suavis-pierre-leaves-white-surface_51524-12145-removebg-preview 1.png"
           class="absolute left-0 top-0" alt="" />
         <div class="intro-wrapper w-8/12 mx-auto pt-[93px] relative">
@@ -176,10 +181,10 @@
           <img src="./images/Vector 16.svg" alt="vektor" class="absolute -top-[170px] -z-10 -right-24" />
         </div>
         <div class="info__content w-4/5 mx-auto flex justify-between">
-          <div class="info__content---items flex flex-col mt-14">
+          <div class="info__content---items flex flex-col mt-14  duration-300">
             <!-- dinamic content -->
           </div>
-          <img src="./images/bola.png" alt="bola" />
+          <img src="./images/bola.png" alt="bola"  class=" person duration-300"/>
         </div>
       </div>
     </section>
@@ -188,8 +193,8 @@
     <section class="explor bg-green-50">
       <div class="container mx-auto">
         <div class="explore__wrapper flex w-4/5 mx-auto pt-[89px] pb-[143px] relative overflow-hidden">
-          <img src="./images/Group 5287.jpg" alt="explor_img" />
-          <div class="explore__info mx-[50px]">
+          <img src="./images/Group 5287.jpg" alt="explor_img" data-aos="fade-right" />
+          <div class="explore__info mx-[50px]" data-aos="fade-left">
             <h1 class="text-6xl font-bold w-[557px] mb-[20px] leading-[90px] mt-[20px]">
               Explor Our Special Items
             </h1>
@@ -215,7 +220,7 @@
     <section class="comment">
       <div class="container mx-auto">
 
-        <div class="comment__wrapper  swiper mySwiper  relative w-[81%] mx-auto overflow-hidden ">
+        <div class="comment__wrapper   swiper mySwiper  relative w-[81%] mx-auto overflow-hidden " data-aos="zoom-in " data-aos-anchor-placement="top-center">
 
 
           <div class="list w-full  h-auto  flex swiper-wrapper  duration-700 ">
@@ -241,7 +246,8 @@
     </section>
     <!-- Comment section finished -->
     <!-- download section startded -->
-    <section class="download">
+    <section class="download" data-aos="fade-up"
+     data-aos-anchor-placement="top-center">
       <div class="container mx-auto">
         <div class="download__wrapper w-4/5 mx-auto flex mb-[146px]">
           <div class="w-[50%] relative">
@@ -270,6 +276,8 @@
               </a>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -354,9 +362,12 @@
 
   <!-- Swiper JS -->
   <script  src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
+     AOS.init();
 
     var swiper = new Swiper(".mySwiper", {
       navigation: {

@@ -160,7 +160,6 @@ const carouselData = [
 const list = document.querySelector(".list");
 
 carouselData.forEach((item) => {
-  
   const itemCorusel = createElement(
     "div",
     "explore__wrapper swiper-slide flex pt-[89px] pb-[143px] relative  duration-500 min-w-[1239px] mx-1 px-3",
@@ -183,7 +182,8 @@ carouselData.forEach((item) => {
               <img src="./images/reyting.png" alt="reyting" class="absolute bottom-4 -left-8" />
             </div>
   
-  `);
+  `
+  );
 
   list.append(itemCorusel);
 });
@@ -216,3 +216,46 @@ carouselData.forEach((item) => {
 //   slider();
 //   clearInterval(playCarousel);
 // });
+
+// ---- ------- ---- ---- ---  animate zoom - -- -- - - - --   - -- -- - - - --
+
+let body = document.querySelector("body");
+let header = document.querySelector("header");
+let intro = document.querySelector(".intro__wrapper");
+let info__content = document.querySelector('.info__content---items');
+let person = document.querySelector('.person');
+
+console.log(body);
+
+window.addEventListener("scroll", (e) => {
+  console.log(window.scrollY);
+  let scrollY = window.scrollY;
+
+  if (scrollY > 232) {
+    header.classList.add(
+      "top-0",
+      "w-full",
+      "bg-white",
+      "z-10",
+      "duration-500",
+    );
+  } else {
+    header.classList.remove("fixed");
+  }
+
+  if (scrollY > 643) {
+    info__content.classList.remove("-translate-x-96");
+    person.classList.remove("translate-x-96");
+  } else {
+    info__content.classList.add("-translate-x-96");
+    person.classList.add("translate-x-96");
+  }
+
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  intro.classList.remove('translate-y-60')
+})
+
+
