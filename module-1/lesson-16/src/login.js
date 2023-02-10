@@ -23,7 +23,6 @@ function submitSignup(e) {
 
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": ""
             },
 
             body: JSON.stringify(user)
@@ -31,7 +30,7 @@ function submitSignup(e) {
             return resolve.json()
         }).then((result) => {
 
-            localStorage.setItem('token', result.tokens.access_token)
+            localStorage.setItem('token', result.token)
             localStorage.setItem('id', result.user.id)
             localStorage.setItem('username', result.user.username)
 
