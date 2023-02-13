@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- vue CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Tailwind CDN play -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- box icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>lesson-1</title>
+  </head>
+  <body>
+    <div id="root">
+      <header class="bg-green-600 w-full">
+        <div class="container mx-auto px-5">
+          <nav class="nav flex justify-between h-[70px] items-center">
+            <a href="#" class="text-white text-2xl font-semibold"
+              >VUE.JS BOOTCAMP</a
+            >
+
+            <i class="bx bx-menu text-3xl text-white" @click="setToggle"></i>
+          </nav>
+        </div>
+      </header>
+
+      <main class="min-h-screen">
+        <aside
+          class="bg-white w-1/6 shadow-2xl min-h-screen duration-200"
+          v-show="toggle"
+        >
+          <ul class="list">
+
+            <li
+              v-for="item in navLinks"  :key="item.id"
+              class="list__item p-4 bg-green-100 m-1 text-slate-800 font-semibold rounded-lg uppercase hover:bg-green-200 shadow duration-200"
+            >
+              <a href="#" class="list__item-link">{{item.title}}</a>
+
+            </li>
+          </ul>
+
+        </aside>
+
+        <section class="main"></section>
+      </main>
+
+      <footer class="bg-green-600 p-5">
+        <div class="container mx-auto">
+          <p class="text-center text-white font-bold">
+            {{ new Date().getFullYear() }}
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <!-- main script -->
+  <script src="./app.js"></script>
+</html>

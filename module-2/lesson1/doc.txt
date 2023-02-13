@@ -1,0 +1,11 @@
+1. Vue installation
+2. Create a new VUE app
+3. Vue developer tools
+4. Vue events -> v-on:click or @click 
+5. data ()
+6. methods ()
+7. mounted()
+8. mount()
+
+
+9. v-show , v-for , 
