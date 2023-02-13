@@ -8,4 +8,4 @@
 8. mount()
 
 
-9. v-show , v-for , 
+9. v-show, v-if v-else, v-for , v-bind , v-on:click or @click 

@@ -15,6 +15,7 @@
     />
     <title>lesson-1</title>
   </head>
+
   <body>
     <div id="root">
       <header class="bg-green-600 w-full">
@@ -29,25 +30,80 @@
         </div>
       </header>
 
-      <main class="min-h-screen">
+      <main class="min-h-screen flex">
         <aside
           class="bg-white w-1/6 shadow-2xl min-h-screen duration-200"
-          v-show="toggle"
+          v-if="toggle"
         >
           <ul class="list">
-
             <li
-              v-for="item in navLinks"  :key="item.id"
+              v-for="item in navLinks"
+              :key="item.id"
               class="list__item p-4 bg-green-100 m-1 text-slate-800 font-semibold rounded-lg uppercase hover:bg-green-200 shadow duration-200"
             >
               <a href="#" class="list__item-link">{{item.title}}</a>
-
             </li>
           </ul>
-
         </aside>
 
-        <section class="main"></section>
+        <section class="main bg-sky-100 w-5/6 min-h-screen flex-grow">
+          <div class="container mx-auto">
+            <div
+              class="card w-[1200px] mx-auto min-h-[400px] shadow-2xl bg-white m-5 p-6"
+            >
+              <form action="#" @submit="addNewTask">
+                <label for="taskname" class="w-4/5">
+                  <p class="text-slate-800 ml-32 mb-4 font-bold">
+                    Enter task title
+                  </p>
+                  <input
+                    type="text"
+                    class="p-4 border w-4/5 focus:ring-2 focus:ring-green-300 focus:outline-none mx-auto block"
+                    id="taskname"
+                    v-bind:value="taskName"
+                    @input="e=>taskName=e.target.value"
+                  />
+                </label>
+
+                <label for="taskdate" class="w-4/5">
+                  <p class="text-slate-800 ml-32 mb-4 font-bold mt-4">
+                    Enter task title
+                  </p>
+                  <input
+                    type="date"
+                    class="p-4 border w-4/5 focus:ring-2 focus:ring-green-300 focus:outline-none mx-auto block"
+                    id="taskdate"
+                    v-bind:value="taskDeadline"
+                    @input="e=>taskDeadline=e.target.value"
+                  />
+                </label>
+
+                <button
+                  class="bg-green-500 p-5 mx-auto block w-4/5 my-5 text-lg font-bold focus:ring-4 focus:ring-green-300 focus:text-white"
+                >
+                  ADD NEW TASK
+                </button>
+              </form>
+            </div>
+
+            <div
+              class="card w-[1200px] mx-auto min-h-[400px] shadow-2xl bg-white m-5 p-6"
+            >
+              <ul v-if="tasks.length">
+                <li
+                  class="p-5 bg-green-200 rounded-lg my-3"
+                  v-for="item in tasks"
+                >
+                  {{item.title}}
+                </li>
+              </ul>
+
+              <ul v-else class="list-task">
+                TASK NOT FOUND
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="bg-green-600 p-5">
