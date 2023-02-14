@@ -14,6 +14,13 @@
       rel="stylesheet"
     />
     <title>lesson-1</title>
+
+    <style>
+      .swipe{
+        transform: translateX(-120%);
+      }
+    </style>
+
   </head>
 
   <body>
@@ -31,6 +38,7 @@
       </header>
 
       <main class="min-h-screen flex">
+        
         <aside
           class="bg-white w-1/6 shadow-2xl min-h-screen duration-200"
           v-if="toggle"
@@ -46,7 +54,8 @@
           </ul>
         </aside>
 
-        <section class="main bg-sky-100 w-5/6 min-h-screen flex-grow">
+        <section class="main bg-sky-100  min-h-screen flex-grow duration-200" ref="mainSection">
+
           <div class="container mx-auto">
             <div
               class="card w-[1200px] mx-auto min-h-[400px] shadow-2xl bg-white m-5 p-6"
@@ -101,6 +110,36 @@
               <ul v-else class="list-task">
                 TASK NOT FOUND
               </ul>
+            </div>
+
+            <div
+              class="card w-[1200px] mx-auto min-h-[400px] shadow-2xl bg-white m-5 p-6 grid grid-cols-3 gap-4"
+            >
+              <h1
+                v-if="!users.length"
+                class="text-center font-bold text-red-500"
+              >
+                NOT FOUND USER
+              </h1>
+
+              <div
+                v-for="item in users"
+                class="card__item w-[300px] min-h-[400px] shadow-lg bg-white"
+              >
+                <img :src="item.avatar" alt="img" class="w-full" />
+                <div class="card__item-body p-5">
+                  <h1 class="text-center font-semibold text-xl uppercase">
+                    {{item.first_name}} {{item.last_name}}
+                  </h1>
+                  <h2 class="text-center font-medium">{{item.email}}</h2>
+                  <span
+                    :class="item.isOnline ? 'bg-green-500': 'bg-red-700'"
+                    class="text-white font-semibold text-center p-2 rounded-xl block mt-8 shadow-lg"
+                  >
+                    {{`${item.isOnline ? "Online" : "Offline"}`}}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

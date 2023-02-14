@@ -9,3 +9,12 @@
 
 
 9. v-show, v-if v-else, v-for , v-bind , v-on:click or @click 
+
+1. Reputation
+2. Dynamic Attribute
+3. Computed
+4. refs
+5. Vue CLI
+6. Vue Components
+7. Vue props
+8. Vue Component style
