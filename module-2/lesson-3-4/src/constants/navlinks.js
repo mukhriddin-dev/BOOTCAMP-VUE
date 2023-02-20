@@ -6,5 +6,5 @@ const navlinks = [
   { id: 5, link: "extar", title: "Extra", icon: "bx-folder-plus" },
   { id: 6, link: "profil", title: "User", icon: "bxs-user-circle" },
 ];
-
+  
 export default navlinks;
