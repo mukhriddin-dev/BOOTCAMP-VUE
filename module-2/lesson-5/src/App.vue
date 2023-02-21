@@ -2,7 +2,7 @@
   <Header />
   <main>
     <section class="main">
-      <Home :xabar="message"/>
+  <RouterView/>
     </section>
   </main>
   <Footer />
@@ -12,9 +12,7 @@
 import Header from "@/components/Header/Header.vue";
 import Footer from "@/components/Footer/Footer.vue";
 import { RouterView } from "vue-router";
-import Home from "@/views/HomeView.vue";
-import Extra from "@/views/Extra.vue";
-import UserView from "@/views/UserView.vue";
+
 
 export default {
   name: "App",
@@ -26,10 +24,7 @@ export default {
   },
   components: {
     Header,
-    Footer,
-    Home,
-    Extra,
-    UserView,
+    Footer
   },
   methods: {},
   computed: {},

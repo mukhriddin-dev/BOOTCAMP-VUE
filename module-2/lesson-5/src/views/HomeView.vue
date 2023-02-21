@@ -1,31 +1,61 @@
 <template>
-  <div class="bg-red-500 p-20">
-    <h1 class="text-white">Home</h1>
-    <h1 class="text-3xl">
-      NAME: {{ newMessage}}
-      <UserView :xabar2="xabar"/>
-    </h1>
+  <div class="container mx-auto p-20 flex justify-center items-center">
+    <form action="#" class="shadow p-5 w-2/3" @submit="adduser">
+
+
+      <Input labelId="username" inputType="text" placeholder="Enter username" :value="name"
+        @input="$event => name = $event.target.value" />
+
+
+      <Input labelId="email" inputType="email" placeholder="Enter user email"  :value="email"
+          @input="emailHandler" />
+
+
+      <Button btnType="submit" textContent="ADD NEW USER" class="bg-cyan-500 text-white mx-auto block w-1/2" />
+    </form>
   </div>
 </template>
 <script>
-
-import UserView from './UserView.vue';
+import UserView from "./UserView.vue";
+import Input from "../ui/Input.vue";
+import Button from "../ui/Button.vue";
 
 export default {
-  
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    UserView
-  },
-  props: {
-    xabar: String,
+    UserView,
+    Input,
+    Button,
   },
   data() {
     return {
-        newMessage: this.xabar
-    }
-  }
+      name: "",
+      email: "",
+    };
+  },
 
-}
+  methods: {
+
+    adduser(e) {
+      e.preventDefault();
+
+      const newUser = {
+        id: Date.now(),
+        name: this.name,
+        email: this.email
+      }
+
+      console.log(newUser)
+
+    },
+
+
+    emailHandler(e) {
+      this.email = e.target.value;
+    }
+  },
+
+
+};
 </script>
 <style lang="scss"></style>
