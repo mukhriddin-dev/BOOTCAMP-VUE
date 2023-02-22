@@ -1,16 +1,9 @@
 {
-
-    "user": [
-        {
-            "id": 1,
-            "name": "John Smith",
-            "email": "John@smith.com"
-        }, {
-            "id": 2,
-            "name": "John Doe",
-            "email": "John@doe.com"
-        }
-
-    ]
-
+  "user": [
+    {
+      "id": "a3d6cde9-5cd5-4461-a350-b972d5529804",
+      "name": "Администратор",
+      "email": "abdulazizr2017@yandex.com"
+    }
+  ]
 }

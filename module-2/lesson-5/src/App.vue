@@ -2,7 +2,7 @@
   <Header />
   <main>
     <section class="main">
-  <RouterView/>
+      <RouterView />
     </section>
   </main>
   <Footer />
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       userlist: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-      message:"Welcome to Vue.js"
+      message: "Welcome to Vue.js"
     };
   },
   components: {
@@ -28,7 +28,7 @@ export default {
   },
   methods: {},
   computed: {},
-  mounted() {},
+  mounted() { },
 };
 </script>
 <style scoped>
