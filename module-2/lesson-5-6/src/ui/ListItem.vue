@@ -5,7 +5,8 @@
         <td>{{ item.name }}</td>
         <td>{{ item.email }}</td>
         <td>
-            <button class="bg-cyan-600 focus:ring-2 focus:ring-cyan-200 px-4 py-2 duration-200 text-white rounded-2xl">
+            <button @click="openModal(item.id)"
+                class="bg-cyan-600 focus:ring-2 focus:ring-cyan-200 px-4 py-2 duration-200 text-white rounded-2xl">
                 Edit
             </button>
         </td>
@@ -24,9 +25,18 @@ export default {
     props: {
         num: [String, Number],
         item: Object,
-        removeUser: Function
+        removeUser: Function,
     },
-
+    data() {
+        return {
+           
+        }
+    },
+    methods: {
+        openModal(id) {
+            this.$emit('open', id)
+        }
+    },
     updated() {
         console.log("ListItem updated")
     }

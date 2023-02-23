@@ -4,12 +4,12 @@
       <Input labelId="username" inputType="text" placeholder="Enter username" :value="name"
         @input="($event) => (name = $event.target.value)" />
 
-      <Input labelId="email" inputType="email" placeholder="Enter user email" :value="email" @input="emailHandler" />
-
+      <Input labelId="email" inputType="text" placeholder="Enter user email" :value="email" @input="emailHandler" />
       <Button btnType="submit" textContent="ADD NEW USER" class="bg-cyan-500 text-white mx-auto block w-1/2" />
     </form>
   </div>
 </template>
+
 <script>
 import UserView from "./UserView.vue";
 import Input from "../ui/Input.vue";
