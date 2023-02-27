@@ -10,27 +10,28 @@
             </div>
 
             <div class="modal-body bg-white min-h-[440px] flex justify-center items-center">
-                <form action="#" class="min-w-[80%] p-3 rounded-md text-center">
+                <form action="#" class="min-w-[80%] p-3 rounded-md text-center" @submit.prevent>
                     <label for="fullname" class="w-full">
                         <p class="mb-2 text-left ml-16 mt-2">
                             Enter fullname <span class="text-red-600">*</span>
                         </p>
-                        <input type="text"
+                        <input type="text" :value="isname"
                             class="form-control w-[80%] mx-auto p-3 rounded-md mb-4 focus:ring-4 focus:ring-sky-400 focus:outline-none border"
-                            id="fullname1" placeholder="enter fullname" />
+                            id="fullname1" placeholder="enter fullname" @input="$event => isname = $event.target.value" />
                     </label>
 
                     <label for="tel">
                         <p class="mb-2 text-left ml-16">
                             Enter email <span class="text-red-600">*</span>
                         </p>
-                        <input type="email" placeholder="enter email address"
+                        <input type="text" :value="isemail" placeholder="enter email address"
+                            @input="$event => isemail = $event.target.value"
                             class="form-control w-[80%] mx-auto p-3 rounded-md mb-4 focus:ring-4 focus:ring-sky-400 focus:outline-none border"
                             id="tel" />
                     </label>
 
 
-                    <button
+                    <button @click="editPost"
                         class="btn block mx-auto w-[80%] my-4 bg-green-500 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-green-700 focus:ring-4 focus:ring-green-400 duration-200">
                         SAVE
                     </button>
@@ -53,13 +54,33 @@
 export default {
     name: "Modal",
     props: {
-        isOpen: Boolean
+        isOpen: Boolean,
+        username: String,
+        useremail: String,
+    },
+    data() {
+        return {
+            isname: "",
+            isemail: "",
+        }
     },
     methods: {
+
         hideModal() {
             this.$emit('hide')
+        },
+
+        editPost() {
+
+            const newData = {
+                name: this.isname || this.username,
+                email: this.isemail || this.useremail
+            }
+
+            this.$emit('edit', newData)
         }
-    }
+    },
+
 }
 
 </script>

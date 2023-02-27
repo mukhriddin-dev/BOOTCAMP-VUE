@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white pt-5 w-1/2 mx-auto min-h-[300px] shadow-lg px-10 container">
         <!-- modal  -->
-        <Modal :isOpen="isOpen" @hide="hideModal" />
+        <Modal :isOpen="isOpen" @hide="hideModal" :username="username" :useremail="useremail" @edit="updatePost" />
         <!-- modal  -->
 
         <h1 class="text-rgb(25, 235, 25)-700 text-center text-2xl uppercase font-semibold">
@@ -25,10 +25,8 @@
 
             <tbody class="w-full">
 
-                <ListItem v-if="!isLoading" v-for="(item, index) in userList" :key="item.id" :num="index" :item="item"
+                <ListItem v-if="!isLoading" v-for="(item, dataUser) in userList" :key="item.id" :num="index" :item="item"
                     :removeUser="removeUser" @open="isOpenTrue" />
-
-
             </tbody>
         </table>
     </div>
@@ -37,6 +35,7 @@
 import axios from "@/service/axios";
 import ListItem from "@/ui/ListItem.vue";
 import Modal from "@/components/Modal/Modal.vue";
+import { toast } from "vue3-toastify";
 
 export default {
     name: "UserView",
@@ -47,6 +46,8 @@ export default {
             isLoading: true,
             isOpen: false,
             editId: "",
+            username: "",
+            useremail: "",
         };
     },
     methods: {
@@ -67,7 +68,10 @@ export default {
 
         removeUser(id) {
             axios.delete(`/user/${id}`, {});
-            location.reload();
+            toast.info("User removed successfully")
+            setTimeout(() => {
+                // location.reload();
+            }, 1300)
         },
 
         async isOpenTrue(id) {
@@ -77,6 +81,9 @@ export default {
             try {
                 const postItem = await axios.get(`/user/${this.editId}`);
                 console.log(postItem.data)
+                const { name, email } = postItem.data;
+                this.username = name
+                this.useremail = email
             } catch (e) {
                 console.log(e)
             }
@@ -86,12 +93,25 @@ export default {
             this.isOpen = false;
         },
 
+        updatePost(data) {
+
+            axios.put(`/user/${this.editId}`, data)
+
+            toast.success('Updated post successfully')
+            setTimeout(() => {
+                location.reload()
+            }, 1000)
+        }
+
     },
     mounted() {
         this.getAlluser();
     },
-    computed() {
-        this.getAlluser();
+    computed: {
+
+        dataUser(){
+            return this.getAlluser();
+        }
     },
 
     updated() {

@@ -1,0 +1,10 @@
+1. Router params
+2. Router push
+3. Router redirect
+
+
+1.Vuex install
+2. Local store vs Global store
+4. State
+5. Mutations
+6. commit 
