@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "title": ".value",
+      "body": ".value",
+      "id": 1
+    },
+    {
+      "id": 1677824429557,
+      "title": "item1",
+      "body": "item 1 body"
+    },
+    {
+      "id": 1677824479590,
+      "title": "lorem 2",
+      "body": "lorem 2 body"
+    },
+    {
+      "id": 1677824575079,
+      "title": "link",
+      "body": "link3"
+    },
+    {
+      "id": 1677824585715,
+      "title": "link2",
+      "body": "link4"
+    },
+    {
+      "id": 1677824639483,
+      "title": "like5",
+      "body": "state.getpost.postsstate.getpost.postsstate.getpost.postsstate.getpost.posts"
+    },
+    {
+      "id": 1677824798862,
+      "title": "",
+      "body": ""
+    }
+  ]
+}
